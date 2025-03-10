@@ -1,0 +1,109 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: fit-content;
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+    max-height: 63%;
+}
+
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.task-form input, .task-form button {
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.task-form input {
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+}   
+
+.task-form input:focus {
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+.task-form button {
+    width: 205px;
+    background-color: #3ce0ad;
+    color: white;
+    font-weight: bold;
+}
+
+.task-form button:hover {
+    background-color: #15c390;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+}
+
+.task-list {
+    margin-top: 45px;
+    text-align: left;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-item {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    max-height: 80vh; /* تحديد أقصى ارتفاع للحاوية */
+    overflow-y: auto; /* إضافة شريط التمرير عند امتلاء الحاوية */
+}
+
+.task-item:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.animate__pulse {
+    animation: pulse 1.5s infinite;
+}
