@@ -1,5 +1,3 @@
-# TypeScript-Project
-
 # TypeScript Project :
 
 # ( ✅ To-Do List Website ) 
